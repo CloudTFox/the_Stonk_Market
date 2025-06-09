@@ -13,6 +13,9 @@ portfolio = {}
 money = 10000
 
 def show_menu():
+    """
+    Displays the main menu options for the stock trading application.
+    """
     print("1. View Stocks")
     print("2. Buy Stock")
     print("3. Sell Stock")
@@ -20,6 +23,11 @@ def show_menu():
     print("5. Exit")
 
 def view_stocks():
+    """
+    Displays the current prices of all stocks, applying a random price fluctuation to each.
+    
+    Each time this function is called, stock prices are updated by a random amount between -100 and 100 to simulate market volatility, and the updated prices are printed.
+    """
     for stock, price in stocks.items():
         # Prices fluctuate wildly each time you look
         new_price = price + random.randint(-100, 100)
